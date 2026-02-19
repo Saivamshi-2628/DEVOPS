@@ -1,0 +1,273 @@
+.product-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.product-card-inner {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 24px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.product-card:hover .product-card-inner {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.06),
+    0 16px 48px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+.product-image-wrapper {
+  position: relative;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  padding: 3.5rem 2rem;
+  overflow: hidden;
+}
+
+.product-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.product-image {
+  font-size: 5.5rem;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+  user-select: none;
+}
+
+.product-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+  color: white;
+  padding: 0.35rem 0.85rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);
+  z-index: 3;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.product-content {
+  padding: 1.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-header {
+  margin-bottom: 1.5rem;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #1d1d1f;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.product-description {
+  color: #86868b;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  letter-spacing: -0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.add-to-cart-button {
+  background: #007AFF;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.25);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  letter-spacing: -0.2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-to-cart-button:hover {
+  background: #0051D5;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
+}
+
+.add-to-cart-button:active {
+  transform: scale(0.98);
+}
+
+.check-icon {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.cart-plus-icon {
+  font-size: 1.2rem;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 1;
+}
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+  padding: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.cart-control-btn {
+  background: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #1d1d1f;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  padding: 0;
+}
+
+.cart-control-btn span {
+  line-height: 1;
+  display: inline-block;
+}
+
+.cart-control-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.cart-control-btn:not(:disabled):hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.cart-control-btn.remove {
+  margin-left: 0.25rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  color: #ff3b30;
+}
+
+.cart-control-btn.remove:hover {
+  background: rgba(255, 59, 48, 0.1);
+}
+
+.cart-control-btn.remove svg {
+  color: #ff3b30;
+}
+
+.quantity-display {
+  min-width: 32px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  padding: 0 0.5rem;
+}
+
+.card-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .product-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .add-to-cart-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cart-controls {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .product-image {
+    font-size: 4.5rem;
+  }
+
+  .product-content {
+    padding: 1.5rem;
+  }
+}

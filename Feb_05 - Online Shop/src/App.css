@@ -1,0 +1,26 @@
+/* App-level styles — layout and page transitions */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app main {
+  flex: 1;
+}
+
+.page-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.page-container.wide {
+  max-width: var(--max-width-wide);
+}
+
+@media (min-width: 734px) {
+  .page-container {
+    padding: 3rem 2rem;
+  }
+}

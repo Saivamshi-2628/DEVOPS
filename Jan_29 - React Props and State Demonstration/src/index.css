@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --apple-blue: #007AFF;
+  --apple-blue-dark: #0051D5;
+  --apple-red: #ff3b30;
+  --apple-gray: #86868b;
+  --apple-dark: #1d1d1f;
+  --apple-light: #fbfbfd;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fbfbfd;
+  min-height: 100vh;
+  color: #1d1d1f;
+  letter-spacing: -0.2px;
+}
+
+code {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar - Apple style */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+  background-clip: padding-box;
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 122, 255, 0.2);
+  color: #1d1d1f;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #007AFF;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Button reset */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Input reset */
+input {
+  font-family: inherit;
+}

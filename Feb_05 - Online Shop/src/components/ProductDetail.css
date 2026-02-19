@@ -1,0 +1,131 @@
+.product-detail {
+  padding: 2rem 0 4rem;
+}
+
+.product-detail-missing {
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.product-detail-missing p {
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.product-detail-back {
+  display: inline-block;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  transition: opacity var(--transition-fast);
+}
+
+.product-detail-back:hover {
+  opacity: 0.85;
+}
+
+.product-detail-card {
+  display: grid;
+  gap: 2rem;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 734px) {
+  .product-detail-card {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+}
+
+.product-detail-visual {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.product-detail-icon {
+  font-size: 6rem;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.25));
+}
+
+.product-detail-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 734px) {
+  .product-detail-content {
+    padding: 3rem;
+  }
+}
+
+.product-detail-name {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+}
+
+.product-detail-tagline {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.product-detail-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.product-detail-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.product-detail-specs li {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  padding: 0.35rem 0.75rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 980px;
+}
+
+.product-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-detail-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.product-detail-url-note {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.product-detail-url-note code {
+  padding: 0.1em 0.4em;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  font-size: 0.9em;
+}

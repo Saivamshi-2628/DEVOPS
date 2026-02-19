@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  background: #fbfbfd;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.app-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1.25rem 0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo h1 {
+  color: #1d1d1f;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 0.75rem 1.25rem 0.75rem 2.75rem;
+  color: #1d1d1f;
+  font-size: 0.9375rem;
+  width: 320px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.search-input::placeholder {
+  color: #86868b;
+}
+
+.search-input:focus {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: #007AFF;
+  width: 380px;
+  box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  font-size: 1rem;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cart-button {
+  position: relative;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cart-button:hover {
+  background: rgba(0, 0, 0, 0.06);
+  transform: scale(1.05);
+}
+
+.cart-icon {
+  font-size: 1.25rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ff3b30;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(255, 59, 48, 0.4);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 0;
+}
+
+.filter-section {
+  max-width: 1400px;
+  margin: 0 auto 2.5rem;
+  padding: 0 2.5rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1d1d1f;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: capitalize;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  letter-spacing: -0.2px;
+}
+
+.filter-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.filter-btn.active {
+  background: #007AFF;
+  border-color: #007AFF;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.25);
+}
+
+.filter-btn.active:hover {
+  background: #0051D5;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.35);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1.5rem;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-input:focus {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .logo-icon {
+    font-size: 1.75rem;
+  }
+
+  .filter-section {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .main-content {
+    padding: 2rem 0;
+  }
+}

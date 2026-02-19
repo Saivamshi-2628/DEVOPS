@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Platform</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Training Platform</h1>
+            <p>Manage courses and enrollments</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="courses">Courses</button>
+            <button class="tab-btn" data-tab="enrollments">Enrollments</button>
+        </div>
+
+        <!-- Courses Tab -->
+        <div id="courses-tab" class="tab-content active">
+            <div class="section-header">
+                <h2>Courses</h2>
+                <button class="btn btn-primary" onclick="showCourseForm()">+ Add Course</button>
+            </div>
+
+            <!-- Course Form Modal -->
+            <div id="courseModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeCourseForm()">&times;</span>
+                    <h2 id="courseModalTitle">Add New Course</h2>
+                    <form id="courseForm" onsubmit="handleCourseSubmit(event)">
+                        <input type="hidden" id="courseId">
+                        <div class="form-group">
+                            <label>Title *</label>
+                            <input type="text" id="courseTitle" required minlength="3" maxlength="150">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea id="courseDescription" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Price *</label>
+                            <input type="number" id="coursePrice" step="0.01" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Status *</label>
+                            <select id="courseStatus" required>
+                                <option value="draft">Draft</option>
+                                <option value="published">Published</option>
+                                <option value="archived">Archived</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" onclick="closeCourseForm()">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="coursesList" class="cards-container">
+                <div class="loading">Loading courses...</div>
+            </div>
+        </div>
+
+        <!-- Enrollments Tab -->
+        <div id="enrollments-tab" class="tab-content">
+            <div class="section-header">
+                <h2>Enrollments</h2>
+                <button class="btn btn-primary" onclick="showEnrollmentForm()">+ Add Enrollment</button>
+            </div>
+
+            <!-- Enrollment Form Modal -->
+            <div id="enrollmentModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeEnrollmentForm()">&times;</span>
+                    <h2 id="enrollmentModalTitle">Add New Enrollment</h2>
+                    <form id="enrollmentForm" onsubmit="handleEnrollmentSubmit(event)">
+                        <input type="hidden" id="enrollmentId">
+                        <div class="form-group">
+                            <label>Course *</label>
+                            <select id="enrollmentCourseId" required>
+                                <option value="">Select a course...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Student Email *</label>
+                            <input type="email" id="enrollmentEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Progress (%)</label>
+                            <input type="number" id="enrollmentProgress" min="0" max="100" value="0">
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" onclick="closeEnrollmentForm()">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="enrollmentsList" class="cards-container">
+                <div class="loading">Loading enrollments...</div>
+            </div>
+        </div>
+
+        <!-- Alert Messages -->
+        <div id="alert" class="alert"></div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Local-only folders
+Resources/
+
+# Ignore gitignore itself
+.DS_Store
+
+#Sir-Code
+Sir Code/

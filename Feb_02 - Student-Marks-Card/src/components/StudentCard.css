@@ -1,0 +1,149 @@
+.student-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 20px 20px 18px;
+  width: 100%;
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.18),
+    0 0 0 1px rgba(148, 163, 184, 0.18);
+  box-sizing: border-box;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.student-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.3),
+    0 0 0 1px rgba(148, 163, 184, 0.25);
+  background-color: #ffffff;
+}
+
+.student-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.student-name {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.student-roll {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.grade-pill {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  min-width: 70px;
+}
+
+.grade-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6b7280;
+}
+
+.grade-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.grade-a {
+  background: #dcfce7;
+}
+
+.grade-b {
+  background: #e0f2fe;
+}
+
+.grade-c {
+  background: #fef9c3;
+}
+
+.grade-fail {
+  background: #fee2e2;
+}
+
+.marks-section {
+  padding-top: 4px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.section-title {
+  margin: 10px 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.marks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mark-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #374151;
+}
+
+.subject-label {
+  opacity: 0.85;
+}
+
+.subject-mark {
+  font-weight: 600;
+}
+
+.result {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.total-label {
+  color: #4b5563;
+}
+
+.total-value {
+  font-weight: 700;
+  color: #111827;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

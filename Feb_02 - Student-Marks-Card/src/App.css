@@ -1,0 +1,67 @@
+/* ============================================
+   Global app shell styling (Apple-like look)
+   - Soft gradient background
+   - Centered content with good whitespace
+   ============================================ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px 56px;
+  background: radial-gradient(circle at top, #ffffff 0%, #e9edf5 45%, #d7dce8 100%);
+  color: #111827;
+  box-sizing: border-box;
+}
+
+.app-header {
+  max-width: 960px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-subtitle {
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin: 0 0 6px;
+}
+
+.app-title {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 10px;
+  color: #0f172a;
+}
+
+.app-description {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* Grid layout for reusable student cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 960px;
+  margin-top: 32px;
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 32px 16px 40px;
+  }
+
+  .card-grid {
+    gap: 16px;
+  }
+}
